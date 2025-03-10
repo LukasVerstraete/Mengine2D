@@ -1,8 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "/iq9zCzv+KcxoaYlQ8PthxoLsEEBZysPRGIgUQrinzUfNXP+BYH03aTN3lIY+thUiYUaOY4Qd2NNL+Lq6OQtrw==",
+  "dgSpecHash": "vOjCBEQZ51EJKj5IK8ZrHZqlbHQkF02A7AVqdW/8awFdDFBHEUE55YW5KG0BYydiWLfLabP73Y1ZatXCA3yv8w==",
   "success": true,
   "projectFilePath": "C:\\Users\\Lukas\\Documents\\projects\\Mengine2D\\Mengine2D.core\\Mengine2D.core.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Lukas\\.nuget\\packages\\alimer.bindings.sdl\\3.9.6\\alimer.bindings.sdl.3.9.6.nupkg.sha512",
+    "C:\\Users\\Lukas\\.nuget\\packages\\defaultecs\\0.17.2\\defaultecs.0.17.2.nupkg.sha512",
+    "C:\\Users\\Lukas\\.nuget\\packages\\microsoft.win32.systemevents\\9.0.2\\microsoft.win32.systemevents.9.0.2.nupkg.sha512",
+    "C:\\Users\\Lukas\\.nuget\\packages\\sharpgl\\3.1.1\\sharpgl.3.1.1.nupkg.sha512",
+    "C:\\Users\\Lukas\\.nuget\\packages\\skiasharp\\3.116.1\\skiasharp.3.116.1.nupkg.sha512",
+    "C:\\Users\\Lukas\\.nuget\\packages\\skiasharp.nativeassets.macos\\3.116.1\\skiasharp.nativeassets.macos.3.116.1.nupkg.sha512",
+    "C:\\Users\\Lukas\\.nuget\\packages\\skiasharp.nativeassets.win32\\3.116.1\\skiasharp.nativeassets.win32.3.116.1.nupkg.sha512",
+    "C:\\Users\\Lukas\\.nuget\\packages\\system.drawing.common\\9.0.2\\system.drawing.common.9.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mengine2D.core", "Mengine2D.core\Mengine2D.core.csproj", "{CD806C4F-C0A6-4F5E-B41B-D9CF96408055}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mengine2D.SDL", "Mengine2D.SDL\Mengine2D.SDL.csproj", "{961B6EE1-3EE9-404F-9643-3C3B7158B8FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mengine2D.testapp", "Mengine2D.testapp\Mengine2D.testapp.csproj", "{C4E114C9-3ABF-4F1F-BC4B-F874569660B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mengine2D.graphics", "Mengine2D.graphics\Mengine2D.graphics.csproj", "{F836FBAE-655B-43AD-B7BF-43E49F183716}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mengine2D.OpenGL", "Mengine2D.OpenGL\Mengine2D.OpenGL.csproj", "{73F45BA1-E42A-422E-8F0C-77C2379DF9FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mengine2D.extensions", "Mengine2D.extensions\Mengine2D.extensions.csproj", "{03F22DBB-D02E-4827-A6F6-BCBA91FE75A2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD806C4F-C0A6-4F5E-B41B-D9CF96408055}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD806C4F-C0A6-4F5E-B41B-D9CF96408055}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD806C4F-C0A6-4F5E-B41B-D9CF96408055}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD806C4F-C0A6-4F5E-B41B-D9CF96408055}.Release|Any CPU.Build.0 = Release|Any CPU
+		{961B6EE1-3EE9-404F-9643-3C3B7158B8FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{961B6EE1-3EE9-404F-9643-3C3B7158B8FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{961B6EE1-3EE9-404F-9643-3C3B7158B8FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{961B6EE1-3EE9-404F-9643-3C3B7158B8FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4E114C9-3ABF-4F1F-BC4B-F874569660B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4E114C9-3ABF-4F1F-BC4B-F874569660B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4E114C9-3ABF-4F1F-BC4B-F874569660B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4E114C9-3ABF-4F1F-BC4B-F874569660B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F836FBAE-655B-43AD-B7BF-43E49F183716}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F836FBAE-655B-43AD-B7BF-43E49F183716}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F836FBAE-655B-43AD-B7BF-43E49F183716}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F836FBAE-655B-43AD-B7BF-43E49F183716}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73F45BA1-E42A-422E-8F0C-77C2379DF9FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73F45BA1-E42A-422E-8F0C-77C2379DF9FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73F45BA1-E42A-422E-8F0C-77C2379DF9FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73F45BA1-E42A-422E-8F0C-77C2379DF9FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03F22DBB-D02E-4827-A6F6-BCBA91FE75A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03F22DBB-D02E-4827-A6F6-BCBA91FE75A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03F22DBB-D02E-4827-A6F6-BCBA91FE75A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03F22DBB-D02E-4827-A6F6-BCBA91FE75A2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
