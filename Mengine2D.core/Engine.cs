@@ -7,8 +7,6 @@ using Mengine2D.graphics.shaders;
 
 using SDL3;
 
-using SharpGL.Shaders;
-
 using static SDL3.SDL3;
 
 namespace Mengine2D.core;

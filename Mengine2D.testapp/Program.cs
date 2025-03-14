@@ -1,8 +1,12 @@
-﻿using DefaultEcs;
+﻿using System.Numerics;
+
+using DefaultEcs;
 
 using Mengine2D.core;
 using Mengine2D.core.components;
 using Mengine2D.core.ecs;
+using Mengine2D.core.events;
+using Mengine2D.core.input;
 using Mengine2D.graphics.meshes;
 using Mengine2D.graphics.shaders;
 
@@ -19,7 +23,7 @@ public class TestApp
 
 public class TestGame : Game
 {
-    public TestGame() : base(new GameConfig("Test", 1920, 1080)) { }
+    public TestGame() : base(new GameConfig("Test", 1080, 720)) { }
 
     public override void Init(Engine engine)
     {
@@ -31,10 +35,10 @@ public class TestGame : Game
         var texture = TextureLoader.LoadTexture("./assets/girl.png");
         float[] vertices = {
             // Position (x, y, z)  | Texture Coords (u, v)
-            -0.5f,  0.5f, 0.0f,    0.0f, 1.0f, // Top-left
-            0.5f,  0.5f, 0.0f,    1.0f, 1.0f, // Top-right
-            0.5f, -0.5f, 0.0f,    1.0f, 0.0f, // Bottom-right
-            -0.5f, -0.5f, 0.0f,    0.0f, 0.0f  // Bottom-left
+            -0.5f,  0.5f, 0.0f, 0.0f, 1.0f, // Top-left
+            0.5f,  0.5f, 0.0f, 1.0f, 1.0f, // Top-right
+            0.5f, -0.5f, 0.0f, 1.0f, 0.0f, // Bottom-right
+            -0.5f, -0.5f, 0.0f, 0.0f, 0.0f  // Bottom-left
         };
 
         uint[] indices = {
@@ -51,8 +55,51 @@ public class TestGame : Game
         renderable.Set(new RenderComponent(mesh));
         renderable.Set(transform);
 
-        // engine.EntityManager.RegisterSystem(new TestSystem(engine.EntityManager.World));
+        engine.EntityManager.RegisterSystem(new CameraMoveSystem(engine.EntityManager.World));
     }
+}
+
+public class CameraMoveSystem : BaseSystem
+{
+	public Vector3 Direction {get; set;} = Vector3.Zero;
+	private const float CAMERA_SPEED = 0.5f;
+
+	public CameraMoveSystem(World world) : base(world)
+	{}
+
+	public override void Update(float state)
+	{
+		var entities = World.GetEntities().With<CameraComponent>().With<Transform>().AsEnumerable();
+
+		foreach(var entity in entities)
+		{
+			var transform = entity.Get<Transform>();
+			transform.Translate(Direction * state * CAMERA_SPEED);
+		}
+	}
+
+	[Subscribe]
+	public void OnKey(in KeyEvent eventData)
+	{
+		InputManager state = eventData.InputState;
+
+		var direction = new Vector3(0, 0, 0);
+
+		if (state.IsDown(Keys.FORWARD)) { direction.Y += 1; }
+		if (state.IsDown(Keys.BACKWARD)) { direction.Y -= 1; }
+		if (state.IsDown(Keys.LEFT)) { direction.X -= 1; }
+		if (state.IsDown(Keys.RIGHT)) { direction.X += 1; }
+
+
+		if (direction.Length() == 0) 
+		{
+			Direction = Vector3.Zero;
+		}
+		else
+		{
+			Direction = Vector3.Normalize(direction);
+		}
+	}
 }
 
 // public class TestSystem : BaseSystem

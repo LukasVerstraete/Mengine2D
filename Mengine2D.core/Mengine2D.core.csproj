@@ -9,15 +9,11 @@
   <ItemGroup>
     <PackageReference Include="Alimer.Bindings.SDL" Version="3.9.6" />
     <PackageReference Include="DefaultEcs" Version="0.17.2" />
-    <PackageReference Include="SharpGL" Version="3.1.1" />
-    <!-- <PackageReference Include="OpenTK" Version="4.9.3" /> -->
   </ItemGroup>
 
   <ItemGroup>
-    <!-- <ProjectReference Include="..\Mengine2D.SDL\Mengine2D.SDL.csproj" /> -->
     <ProjectReference Include="..\Mengine2D.graphics\Mengine2D.graphics.csproj" />
     <ProjectReference Include="..\Mengine2D.extensions\Mengine2D.extensions.csproj" />
-    <!-- <ProjectReference Include="..\Mengine2D.OpenGL\Mengine2D.OpenGL.csproj" /> -->
   </ItemGroup>
 
   <ItemGroup>

@@ -3,7 +3,7 @@
 public static class VAOFactory
 {
 
-    public static VAO CreateVAO(float[] vertices, uint[] indices)
+    public static VAO CreateVAO(float[] vertices, uint[] indices, bool useTexCoords = true)
     {
         var vao = new VAO();
         vao.Bind();
@@ -11,25 +11,31 @@ public static class VAOFactory
         var vboVertices = BindVertices(vertices);
         OpenGL.Instance.BindBuffer(OpenGL.GL_ARRAY_BUFFER, vboVertices);
 
+		Console.WriteLine(Mesh.VERTEX_SIZE);
+
         OpenGL.Instance.EnableVertexAttribArray(0);
         OpenGL.Instance.VertexAttribPointer(
             0,
             3,
             OpenGL.GL_FLOAT,
             false,
-            3 * sizeof(float),
+            (int)Mesh.VERTEX_SIZE * sizeof(float),
             0
         );
 
-        OpenGL.Instance.EnableVertexAttribArray(1);
-        OpenGL.Instance.VertexAttribPointer(
-            1,
-            2,
-            OpenGL.GL_FLOAT,
-            false,
-            (int)Mesh.VERTEX_SIZE * sizeof(float),
-            3 * sizeof(float)
-        );
+		if (useTexCoords)
+		{
+			OpenGL.Instance.EnableVertexAttribArray(1);
+			OpenGL.Instance.VertexAttribPointer(
+				1,
+				2,
+				OpenGL.GL_FLOAT,
+				false,
+				(int)Mesh.VERTEX_SIZE * sizeof(float),
+				3 * sizeof(float)
+			);
+		}
+
 
         var ibo = BindIndices(indices);
         OpenGL.Instance.BindBuffer(OpenGL.GL_ELEMENT_ARRAY_BUFFER, ibo);

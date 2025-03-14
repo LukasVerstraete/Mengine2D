@@ -31,7 +31,7 @@ public class Transform
         var rotation = GetRotationMatrix();
         var scale = Matrix4x4.CreateScale(Scale);
 
-        return translation * rotation * scale * ParentMatrix;
+        return scale * rotation * translation * ParentMatrix;
     }
 
     public Matrix4x4 GetRotationMatrix()

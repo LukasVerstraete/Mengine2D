@@ -7,7 +7,7 @@ namespace Mengine2D.core.events;
 
 public class KeyEvent
 {
-    public InputManager? InputState { get; set; }
+    public InputManager InputState { get; set; }
     public SDL_Keycode Key { get; set; }
     public bool IsDown { get; set; }
 }
